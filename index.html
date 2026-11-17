@@ -73,8 +73,16 @@ textarea,input,select{font:inherit;border:1px solid #d9e3da;border-radius:10px;p
 body.dark .calendar-cell{background:#294335;color:#e8f0e9}
 @media(max-width:580px){.content-list{columns:1}.formrow{grid-template-columns:1fr}}
 </style>
-
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#245b3b">
 </head>
+ <script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js");
+  });
+}
+</script>
 <body>
 <header><div class="navwrap">
 <a class="brand" href="#home">Faith<span>With</span>God ✝</a>
